@@ -14,6 +14,11 @@ Under normal operation, many jobs will be created each day. The anchor timestamp
 
 The compute framework reads the info contained in a job and triggers all required simulation and pricing tasks as specified in the job. The compute framework has no business logic embedded; it is completely metadata driven and simply performs the tasks specified in the job and stores the output for use in aggregation.
 
-A underlying market factor (UMF) represents a market factor taken as a whole, for example the USD libor curve or a volatility surface. The economic properties of a UMF are a system-wide definition – for example, the fact that USD libor is an interest rate is not a configuration choice but a fact. However, each job spec may specify a different way to model that particular UMF through specification of the calibration set. Also FX spot is another underlying market factor that is used for FX derivatives, such as https://finpricing.com/lib/EqCallable.html
+A underlying market factor (UMF) represents a market factor taken as a whole, for example the USD libor curve or a volatility surface. The economic properties of a UMF are a system-wide definition – for example, the fact that USD libor is an interest rate is not a configuration choice but a fact. However, each job spec may specify a different way to model that particular UMF through specification of the calibration set. Also FX spot is another underlying market factor that is used for FX derivatives.
 
 A market data path represents a possible evolution of market data through time. Generally, all paths start at the same place with the real world market data, but evolve differently to each other over time. Future market data points on a path may be generated either through a simulation model (Monte Carlo paths), through application of pre-specified ‘shocks’ to each market data point, or may be real world values if the path is being generated retrospectively (e.g. for back testing).
+
+
+Reference:
+
+https://finpricing.com/curveVolList.html
