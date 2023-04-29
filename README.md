@@ -21,4 +21,4 @@ A market data path represents a possible evolution of market data through time. 
 
 Reference:
 
-https://finpricing.com/curveVolList.html
+https://github.com/cfrm17/CounterpartyRiskJobs
